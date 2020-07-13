@@ -3,7 +3,7 @@ import random
 
 def display_board(board):
     """
-        Display the Tic Tac Toe Board on screen 
+        Display the Tic Tac Toe Board on screen
 
     """
     os.system("cls")
@@ -102,7 +102,7 @@ def player_choice(board):
 def replay():
     choice = input("Do You want to play Again? Yes or No : ")
     return choice == 'Yes'
-    
+
 
 
 if __name__ == "__main__":
@@ -118,10 +118,10 @@ if __name__ == "__main__":
             game_on = True
         else:
             game_on = False
-        
+
         while game_on:
             if turn =='Player 1':
-                
+
                 display_board(the_board)
                 position = player_choice(the_board)
                 place_marker(the_board,player1_marker,position)
@@ -152,7 +152,6 @@ if __name__ == "__main__":
                         game_on =False
                     else:
                         turn = 'Player 1'
-    
+
         if not replay():
             break
-        

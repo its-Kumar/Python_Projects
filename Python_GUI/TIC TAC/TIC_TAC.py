@@ -42,7 +42,7 @@ def SetLayout(id,player_symbol):
         b9.state(['disabled'])
 
 def CheckWinner():
-    global mov 
+    global mov
     winner = -1
 
     if(1 in p1) and (2 in p1) and (3 in p1):
@@ -86,13 +86,13 @@ def CheckWinner():
         winner = 2
 
     if winner ==1:
-        messagebox.showinfo(title="Congrate.", 
+        messagebox.showinfo(title="Congrate.",
             message="Player 1 is the winner")
     elif winner ==2:
-        messagebox.showinfo(title="Congrate.", 
+        messagebox.showinfo(title="Congrate.",
             message="Player 2 is the winner")
     elif mov ==9:
-        messagebox.showinfo(title="Oops :(", 
+        messagebox.showinfo(title="Oops :(",
             message="It's a Draw!! Try Again...")
 
 def ButtonClick(id):

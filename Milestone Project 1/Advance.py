@@ -39,7 +39,7 @@ def win_check(board,mark):
 
 def random_player():
     return random.choice((-1, 1))
-    
+
 def space_check(board,position):
     return board[position] == ' '
 
@@ -49,18 +49,18 @@ def full_board_check(board):
 
 def player_choice(board,player):
     position = 0
-    
+
     while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board, position):
         try:
             position = int(input('Player %s, choose your next position: (1-9) '%(player)))
         except:
             print("I'm sorry, please try again.")
-        
+
     return position
 
 
 def replay():
-    
+
     return input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
 
 
@@ -78,7 +78,7 @@ while True:
         display_board(available,theBoard)
         position = player_choice(theBoard,player)
         place_marker(available,theBoard,player,position)
-        
+
         if win_check(theBoard,player):
             display_board(available,theBoard)
             print(f"Congratulations ! player {player} wins!..")
