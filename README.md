@@ -9,11 +9,15 @@ This repository contains **Some mini projects** implemented in **Python**
   * TIC TAC TOE game
   * Python Calculator
 
-  ![image](https://raw.githubusercontent.com/its-Kumar/Python_Projects/master/Python_GUI/PYTHON%20CALCULATOR/calc.png)
+  ![image](Python_GUI/PYTHON%20CALCULATOR/calc.png)
 
   * Youtube Video Downloader
 
   ![youtube](YoutubeDownloader/Screenshot.png)
+
+### Python WebApp
+
+[Pure Web Application](python_webapp/requirements.txt)
 
 ---
 
