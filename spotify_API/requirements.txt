@@ -1,0 +1,4 @@
+jupyter
+jpyterlab
+notebook
+requests

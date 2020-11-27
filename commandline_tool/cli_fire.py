@@ -1,6 +1,7 @@
-
 from getpass import getpass
+
 import fire
+
 
 def login(name=None):
     if name is None:
@@ -8,6 +9,7 @@ def login(name=None):
     pw = getpass("what is your password?")
 
     return f"{name=}, {pw=}"
+
 
 if __name__ == "__main__":
     fire.Fire(login)

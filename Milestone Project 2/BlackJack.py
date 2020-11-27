@@ -1,4 +1,4 @@
-'''
+"""
     Milestone Project 2
 
     Game Play
@@ -22,14 +22,40 @@
         then the face cards Jack, Queen, King and Ace) for a total of 52 cards per deck. Jacks, Queens and Kings all have a rank of 10.
         Aces have a rank of either 11 or 1 as needed to reach 21 without busting. As a starting point in your program,
          you may want to assign variables to store a list of suits, ranks, and then use a dictionary to map ranks to values.
-'''
+"""
 import random
 
-suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
-ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven',
-         'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
-values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10, 'Jack': 10,
-          'Queen': 10, 'King': 10, 'Ace': 11}
+suits = ("Hearts", "Diamonds", "Spades", "Clubs")
+ranks = (
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+    "Jack",
+    "Queen",
+    "King",
+    "Ace",
+)
+values = {
+    "Two": 2,
+    "Three": 3,
+    "Four": 4,
+    "Five": 5,
+    "Six": 6,
+    "Seven": 7,
+    "Eight": 8,
+    "Nine": 9,
+    "Ten": 10,
+    "Jack": 10,
+    "Queen": 10,
+    "King": 10,
+    "Ace": 11,
+}
 playing = True
 
 
@@ -52,8 +78,8 @@ class Deck:
     def __str__(self):
         deck_comp = ""
         for card in self.deck:
-            deck_comp += '\n' + card.__str__()
-        return "The deck has  : "+deck_comp
+            deck_comp += "\n" + card.__str__()
+        return "The deck has  : " + deck_comp
 
     def shuffle(self):
         random.shuffle(self.deck)
@@ -74,7 +100,7 @@ class Hand:
         self.values += values[card.rank]
 
         # track  aces
-        if card.rank == 'Ace':
+        if card.rank == "Ace":
             self.aces += 1
 
     def adjust_for_ace(self):
@@ -104,8 +130,11 @@ def take_bet(chips):
             print("Sorry please provide an integer .")
         else:
             if chips.bet > chips.total:
-                print("Sorry you do not have enough chips! You have: {}".format(
-                    chips.total))
+                print(
+                    "Sorry you do not have enough chips! You have: {}".format(
+                        chips.total
+                    )
+                )
             else:
                 break
 
@@ -121,11 +150,11 @@ def hit_or_stand(deck, hand):
     global playing
 
     while True:
-        x = input('Hit or stand? Enter h or s ')
-        if x[0].lower() == 'h':
+        x = input("Hit or stand? Enter h or s ")
+        if x[0].lower() == "h":
             hit(deck, hand)
 
-        elif x[0].lower() == 's':
+        elif x[0].lower() == "s":
             print("Player Stands Dealer's Turn")
             playing = False
         else:
@@ -137,14 +166,14 @@ def hit_or_stand(deck, hand):
 def show_some(player, dealer):
     print("\nDealer's Hand:")
     print(" <card hidden>")
-    print('', dealer.cards[1])
-    print("\nPlayer's Hand:", *player.cards, sep='\n ')
+    print("", dealer.cards[1])
+    print("\nPlayer's Hand:", *player.cards, sep="\n ")
 
 
 def show_all(player, dealer):
-    print("\nDealer's Hand:", *dealer.cards, sep='\n ')
+    print("\nDealer's Hand:", *dealer.cards, sep="\n ")
     print("Dealer's Hand =", dealer.values)
-    print("\nPlayer's Hand:", *player.cards, sep='\n ')
+    print("\nPlayer's Hand:", *player.cards, sep="\n ")
     print("Player's Hand =", player.values)
 
 
@@ -224,7 +253,7 @@ while True:
     print("\n Player's total chips are {} ".format(player_chips.total))
 
     new_game = input("Would you like to play another hand ? y/n ")
-    if new_game[0].lower() == 'y':
+    if new_game[0].lower() == "y":
         playing = True
         continue
     else:

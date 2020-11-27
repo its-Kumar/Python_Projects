@@ -1,0 +1,6 @@
+pandas
+jupyter
+notebook
+jupyterlab
+fastapi
+uvicorn

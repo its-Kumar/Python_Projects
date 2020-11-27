@@ -6,7 +6,7 @@ def is_prime(num):
     if num % 2 == 0:
         return False
 
-    for i in range(3, int(num**0.5)+1, 2):
+    for i in range(3, int(num ** 0.5) + 1, 2):
         if num % i == 0:
             return False
 
@@ -30,9 +30,9 @@ def prime_gen(current_prime):
 current_prime = 2
 while True:
 
-    answer = input('Would you like to see the next prime? (Y/N) ')
+    answer = input("Would you like to see the next prime? (Y/N) ")
 
-    if answer[0].lower() == 'y':
+    if answer[0].lower() == "y":
         print(current_prime)
         current_prime = prime_gen(current_prime)
 

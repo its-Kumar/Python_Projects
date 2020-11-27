@@ -9,14 +9,14 @@ def binary(num):
         num //= 2
 
     rem = rem[::-1]
-    return reduce(lambda x, y: x*10+y, rem)
+    return reduce(lambda x, y: x * 10 + y, rem)
 
 
 def decimal(num):
     num = list(num)
     lst = []
     for i in range(len(num)):
-        lst.append(int(num[i])*(2**i))
+        lst.append(int(num[i]) * (2 ** i))
     return sum((lst))
 
 

@@ -6,7 +6,8 @@ Python GUI Application
 """
 
 # Import Libraries
-from tkinter import Tk, Label, Entry, Button, StringVar
+from tkinter import Button, Entry, Label, StringVar, Tk
+
 # pip install pytube3      # install pytube
 from pytube import YouTube
 
@@ -33,8 +34,7 @@ def download():
         LINK.set("Enter correct LINK!!")
 
 
-Label(ROOT, text='Welcome to Youtube Downloader',
-      font='Consolas 15 bold').pack()
+Label(ROOT, text="Welcome to Youtube Downloader", font="Consolas 15 bold").pack()
 MYVAR.set("Enter the LINK below")
 Entry(ROOT, textvariable=MYVAR, width=40).pack(pady=10)
 Entry(ROOT, textvariable=LINK, width=40).pack(pady=10)
