@@ -5,11 +5,11 @@ This project is all about automating login to account and browsing the internet,
 
 ## Automated google search and scrape
 
-The file [1_google_bot.py](automated_login_and_browsing/1_google_bot.py) contains the code for automated google web seaarch
+The file [1_google_bot.py](1_google_bot.py) contains the code for automated google web seaarch
 
 ## Intagram Bot
 
-This is a [intagram bot](automated_login_and_browsing/2_instaBot.py), which will automatically login in to your instagram account and open user's profile and download thier posts. It also provides automated follow, automated like and automated comments
+This is a [intagram bot](2_instaBot.py), which will automatically login in to your instagram account and open user's profile and download thier posts. It also provides automated follow, automated like and automated comments
 
 ### Setup
 
