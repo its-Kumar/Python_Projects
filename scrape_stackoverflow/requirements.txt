@@ -1,0 +1,4 @@
+jupyter
+requests
+requests_html
+pandas
