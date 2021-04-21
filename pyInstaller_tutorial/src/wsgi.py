@@ -1,6 +1,5 @@
-from waitress import serve
-
 from dsc_os import web_app
+from waitress import serve
 
 if __name__ == "__main__":
     serve(

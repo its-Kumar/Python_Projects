@@ -15,13 +15,20 @@ This repository contains **Some mini projects** implemented in **Python**
 
   ![youtube](YoutubeDownloader/Screenshot.png)
 
+
+### [Pygame Tutorial](Pygame_tutorial)
+
+* BouncingBall
+* Snake Game
+* Space Invadors
+
 ### Python WebApp
 
-[Pure Web Application](python_webapp/README.md)
+* [Pure Web Application](python_webapp/README.md)
 
 ### Command Line Tool
 
-[commandline_tool](commandline_tool/Command%20Line%20Tool.ipynb)
+* [commandline_tool](commandline_tool/Command%20Line%20Tool.ipynb)
 
 ---
 
