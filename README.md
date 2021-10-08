@@ -18,6 +18,11 @@ This repository contains **Some mini projects** implemented in **Python**
   * Youtube Video Downloader
 
   ![youtube](YoutubeDownloader/Screenshot.png)
+  
+* This project uses python to make a Graphical user interface for a Job Application Portal.
+![image](https://user-images.githubusercontent.com/54464202/136579221-ba47061d-8c7a-4e54-a397-83f4dc2c27bc.png)
+
+  
 
 ### [Pygame Tutorial](Pygame_tutorial)
 
