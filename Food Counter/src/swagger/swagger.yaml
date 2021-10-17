@@ -1,0 +1,136 @@
+---
+swagger: "2.0"
+info:
+  description: "Food Count"
+  version: "1.0.0"
+  title: "Finetune Challenge - Food Count"
+  contact:
+    email: "cristianoxavier_@outlook.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "{{host_with_port}}"
+basePath: "/v1"
+schemes:
+  - "https"
+  - "http"
+paths:
+  #endpoints
+  /ping:
+    get:
+      tags:
+        - "Keepalive"
+      summary: "Api keepalive"
+      description: "Apikeepalive"
+      responses:
+        200:
+          description: "pong response"
+      operationId: "get_alive"
+      x-swagger-router-controller: "src.controllers.api_controller"
+
+  /food:
+    get:
+      tags:
+        - "Food List"
+      summary: "Retorna a  lista de alimentos cadastrados"
+      description: "Retorna a  lista de alimentos cadastrados"
+      responses:
+        200:
+          description: "Retorna a  lista de alimentos cadastrados"
+      operationId: "get_list"
+      x-swagger-router-controller: "src.controllers.food_list_controller"
+
+    post:
+      tags:
+        - "Food List"
+      summary: "Adicionar um item a lista"
+      description: "Adicionar um item a lista"
+      parameters:
+        - name: "body"
+          in: "body"
+          required: true
+          schema:
+            $ref: "#/definitions/FoodInput"
+      responses:
+        200:
+          description: 200 operation
+          schema:
+            $ref: "#/definitions/ArrayOfFoodOutput"
+      operationId: "send_to_food_list"
+      x-swagger-router-controller: "src.controllers.food_list_controller"
+
+
+  /food/{id}:
+    delete:
+      tags:
+        - "Food List"
+      summary: "Inativa um item da lista"
+      description: "Inativa um item da lista"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          description: "O registro sera inativado"
+          type: "integer"
+      responses:
+        200:
+          description: "Registro deletado com sucesso"
+        500:
+          description: "Erro no servidor"
+      operationId: "delete_item"
+      x-swagger-router-controller: "src.controllers.food_list_controller"
+
+  /food/{date}:
+    get:
+      tags:
+        - "Food List"
+      summary: "Retorna a  lista de alimentos filtrados pela data"
+      description: "Retorna a  lista de alimentos filtrados pela data"
+      parameters:
+        - name: "date"
+          in: "path"
+          required: true
+          description: "Retorna a  lista de alimentos filtrados pela data"
+          type: "string"
+      responses:
+        200:
+          description: "Registro deletado com sucesso"
+        500:
+          description: "Erro no servidor"
+      operationId: "get_list_by_date"
+      x-swagger-router-controller: "src.controllers.food_list_controller"
+
+
+definitions:
+  FoodInput:
+    type: "object"
+    properties:
+      food_name:
+        type: string
+        example: bananas
+      food_type:
+        type: string
+        example: proteina
+      food_amount:
+        type: integer
+        example: 2
+  FoodOutput:
+    type: "object"
+    properties:
+      food_id:
+        type: integer
+        example: 10
+      food_name:
+        type: string
+        example: bananas
+      food_type:
+        type: string
+        example: proteina
+      food_amount:
+        type: integer
+        example: 2
+
+  ArrayOfFoodOutput:
+    type: "array"
+    items:
+      $ref: "#/definitions/FoodInput"
