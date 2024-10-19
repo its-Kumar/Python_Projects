@@ -5,4 +5,3 @@ if __name__ == '__main__':
     window.button_panel()
     window.game_panel()
     window.mainloop()
-

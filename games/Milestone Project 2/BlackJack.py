@@ -126,7 +126,7 @@ def take_bet(chips):
 
         try:
             chips.bet = int(input("How many chips you like to bet ?"))
-        except:
+        except Exception:
             print("Sorry please provide an integer .")
         else:
             if chips.bet > chips.total:

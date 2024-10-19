@@ -3,13 +3,12 @@ from datetime import datetime
 from random import randrange
 from sqlite3 import Connection as SQLite3Connection
 
+import server
 from faker import Faker
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
-
-import server
 
 # app
 app = Flask(__name__)

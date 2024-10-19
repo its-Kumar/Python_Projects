@@ -96,9 +96,11 @@ def player_choice(board, player):
     ):
         try:
             position = int(
-                input("Player %s, choose your next position: (1-9) " % (player))
+                input(
+                    "Player %s, choose your next position: (1-9) " %
+                    (player))
             )
-        except:
+        except Exception:
             print("I'm sorry, please try again.")
 
     return position
@@ -106,7 +108,8 @@ def player_choice(board, player):
 
 def replay():
 
-    return input("Do you want to play again? Enter Yes or No: ").lower().startswith("y")
+    return input(
+        "Do you want to play again? Enter Yes or No: ").lower().startswith("y")
 
 
 while True:

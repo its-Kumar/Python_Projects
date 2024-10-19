@@ -2,16 +2,15 @@ import random
 from datetime import datetime
 from sqlite3 import Connection as SQLite3Connection
 
-from flask import Flask, jsonify, request
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import event
-from sqlalchemy.engine import Engine
-
 import binary_search_tree
 import hash_table
 import linked_list
 import stack
 from custom_q import Queue
+from flask import Flask, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
 
 # app
 app = Flask(__name__)

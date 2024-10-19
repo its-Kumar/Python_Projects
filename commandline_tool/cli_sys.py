@@ -3,7 +3,7 @@ import sys
 if __name__ == "__main__":
     try:
         name = sys.argv[1]
-    except:
+    except Exception:
         name = input("What is your name?")
     from getpass import getpass
 

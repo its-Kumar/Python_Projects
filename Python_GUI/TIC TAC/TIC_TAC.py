@@ -130,7 +130,7 @@ def AutoPlay():
     try:
         RandIndex = randint(0, len(Empty) - 1)
         ButtonClick(Empty[RandIndex])
-    except:
+    except Exception:
         pass
 
 

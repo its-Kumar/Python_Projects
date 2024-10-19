@@ -2065,7 +2065,7 @@ Difference between exit(0) and exit(1) in Python,178,python exit-code
 "Pandas column of lists, create a row for each list element",178,python pandas list
 Let JSON object accept bytes or let urlopen output strings,178,python json python-3.x encoding urlopen
 "How does Python 2 compare string and int? Why do lists compare as greater than numbers, and tuples greater than lists?",178,python types comparison python-2.x
-BaseException.message deprecated in Python 2.6,178,python exception deprecated
+Exception.message deprecated in Python 2.6,178,python exception deprecated
 What's the correct way to sort Python `import x` and `from x import y` statements?,178,python coding-style python-import pep8
 Does Python SciPy need BLAS?,177,python scipy
 Using headers with the Python requests library's get method,177,python http-request python-requests

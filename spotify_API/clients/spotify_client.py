@@ -112,7 +112,8 @@ class SpotifyAPI(object):
             return {}
         return r.json()
 
-    def search(self, query=None, operator=None, operator_query=None, search_type='artist'):
+    def search(self, query=None, operator=None,
+               operator_query=None, search_type='artist'):
         from urllib.parse import urlencode
         if query is None:
             raise Exception('A query is required to search')

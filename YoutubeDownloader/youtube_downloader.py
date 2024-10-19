@@ -28,7 +28,7 @@ def download():
         YouTube(LINK.get()).streams.first().download()
         print(LINK.get())
         LINK.set("Video Downloaded successfully...")
-    except:
+    except Exception:
         MYVAR.set("Mistake")
         ROOT.update()
         LINK.set("Enter correct LINK!!")

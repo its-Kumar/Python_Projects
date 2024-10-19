@@ -171,8 +171,10 @@ class Game:
         # snake colliding with itself
         for i in range(3, self.snake.length):
             if self.is_collision(
-                self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]
-            ):
+                    self.snake.x[0],
+                    self.snake.y[0],
+                    self.snake.x[i],
+                    self.snake.y[i]):
                 raise Exception("Game Over")
 
         # snake colliding with the walls
@@ -252,7 +254,8 @@ class Game:
         )
         self.surface.blit(line1, (150, 300))
         line2 = font.render(
-            "To play again press Enter, To exit press Escape!", True, (255, 255, 255)
+            "To play again press Enter, To exit press Escape!", True, (
+                255, 255, 255)
         )
         self.surface.blit(line2, (150, 360))
         pygame.display.flip()
